@@ -1,8 +1,5 @@
-name: Laravel test 
-on:
-workflow_dispatch
-
-name: "\U0001F680 Deploy website on push"
+name: "\U0001F680 Deploy website Laravel"
+on: workflow_dispatch
 jobs: 
   web-deploy:
     name: "\U0001F389 Deploy"
