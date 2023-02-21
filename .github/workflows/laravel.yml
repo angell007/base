@@ -1,11 +1,16 @@
-name: Laravel
+on:
+workflow_dispatch
 
-on: workflow_dispatch
-jobs:
-  laravel-tests:
+name: "\U0001F680 Deploy website on push"
+jobs: 
+  web-deploy:
+    name: "\U0001F389 Deploy"
     runs-on: ubuntu-latest
     steps:
-    - uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: "\U0001F69A Get latest code"
+      uses: actions/checkout@v3
+    - name: "\U0001F4C2 Sync files"
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: 186.30.166.150
         port: 2727
